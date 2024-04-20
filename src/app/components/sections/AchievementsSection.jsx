@@ -45,6 +45,11 @@ const AchievementsSection = () => {
                 <AnimatedNumbers
                   includeComma
                   animateToNumber={parseInt(achievement.value)}
+                  transitions={(index) => ({
+                    type: "spring",
+                    duration: index + 0.5,
+                    delay: index * 0.5,
+                  })}
                   locale="en-US"
                   className="text-white text-4xl font-bold"
                   configs={(_, index) => {
